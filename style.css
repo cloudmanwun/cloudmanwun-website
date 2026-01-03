@@ -1,35 +1,50 @@
 /* style.css */
 
-/* Global background for entire site */
-body {
+/* Full-screen GIF background */
+body, html {
   margin: 0;
-  min-height: 100vh;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* prevent scrollbars */
+}
+
+body {
   background-image: url("/website-bg.gif");
-  background-size: cover;
+  background-size: contain;      /* ensures entire GIF is visible */
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;                  /* text color above background */
 }
 
-/* Mobile fix (prevents jank) */
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
-}
-
-/* Keep all page content above the background */
+/* Main content above background */
 main {
   position: relative;
   z-index: 1;
+  text-align: center;
+  font-size: 3rem;
 }
 
-/* Optional: dark overlay for readability */
+/* Optional overlay for readability */
 body::before {
   content: "";
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.35);
   z-index: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* keeps entire GIF visible */
+  }
 }
 
