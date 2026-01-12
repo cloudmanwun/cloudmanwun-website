@@ -10,22 +10,22 @@ html, body {
   height: 100%;
 }
 
-/* Background GIF */
+/* FULL-STRETCH BACKGROUND GIF */
 body {
   background-color: black;
   background-image: url("website-bg.gif");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain; /* keeps full image visible */
+  background-size: cover; /* stretches to fill screen */
 }
 
-/* Logo fixed top-left, smaller, corner */
+/* Fixed logo top-left, slightly bigger (~10% bigger) */
 .logo {
   position: fixed;
-  top: 10px;      /* closer to top */
-  left: 10px;     /* closer to left */
-  width: 30px;    /* 1/4 of previous 120px size */
+  top: 10px;       /* distance from top */
+  left: 10px;      /* distance from left */
+  width: 33px;     /* 10% bigger than previous 30px */
   height: auto;
   pointer-events: none; /* unclickable */
-  z-index: 10;         /* on top of background */
+  z-index: 10;          /* above background */
 }
