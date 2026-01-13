@@ -10,16 +10,16 @@ html, body {
   height: 100%;
 }
 
-/* FULL IMAGE BACKGROUND, NO CROPPING */
+/* FULL-STRETCH BACKGROUND GIF */
 body {
   background-color: black;
   background-image: url("website-bg.gif");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain; /* keeps full image visible, not cropped by taskbar */
+  background-size: 100% 100%; /* STRETCH to fill entire viewport */
 }
 
-/* Fixed logo top-left, slightly bigger (40px wide) */
+/* Fixed logo top-left, slightly bigger */
 .logo {
   position: fixed;
   top: 10px;       /* distance from top */
